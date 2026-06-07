@@ -1,0 +1,22 @@
+{% comment %}
+Renders the news feed in reverse-chronological order with a colored category badge.
+Pass `limit` to cap the number of items, e.g. {% include news-list.html limit=6 %}.
+Each news item sets a `tag` (paper, funding, program, service, talk, teaching, new position, event) for the badge color.
+{% endcomment %}
+{% assign news_items = site.news | sort: 'date' | reverse %}
+<ul class="news-list">
+{% for item in news_items %}
+  {% if include.limit and forloop.index > include.limit %}{% break %}{% endif %}
+  {% case item.tag %}
+    {% when 'paper' %}{% assign badge_bg = '#1c7ed6' %}
+    {% when 'funding' %}{% assign badge_bg = '#2f9e44' %}
+    {% when 'program' %}{% assign badge_bg = '#e64980' %}
+    {% when 'service' %}{% assign badge_bg = '#9c36b5' %}
+    {% when 'talk' %}{% assign badge_bg = '#e8590c' %}
+    {% when 'new position' %}{% assign badge_bg = '#0ca678' %}
+    {% when 'teaching' %}{% assign badge_bg = '#1098ad' %}
+    {% else %}{% assign badge_bg = '#868e96' %}
+  {% endcase %}
+  <li><span class="news-item-body"><strong>{{ item.date | date: "%b %Y" }}</strong>{% if item.tag %} <span style="display:inline-block;background:{{ badge_bg }};color:#fff;font-size:0.66em;font-weight:700;padding:0.12em 0.55em;border-radius:0.8em;text-transform:uppercase;letter-spacing:0.04em;white-space:nowrap;vertical-align:middle;">{{ item.tag }}</span>{% endif %} {{ item.content | remove: '<p>' | remove: '</p>' | strip_newlines }}</span></li>
+{% endfor %}
+</ul>

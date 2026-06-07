@@ -1,0 +1,56 @@
+{% include base_path %}
+
+<!-- start custom head snippets -->
+
+<!-- Support for Academicons -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+
+<!-- Lightning-bolt favicon (?v=3 busts the browser's hard favicon cache) -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png?v=3"/>
+<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg?v=3"/>
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png?v=3" sizes="32x32"/>
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png?v=3" sizes="192x192"/>
+<link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
+<link rel="icon" href="/images/favicon.ico?v=3"/>
+<meta name="theme-color" content="#ffffff"/>
+
+<!-- Custom tweaks: slightly smaller main-content text, and bottom padding so the fixed
+     footer never covers the last line of content -->
+<style>
+  .page__content,
+  .archive { font-size: calc(1rem - 2px); }
+
+  #main { padding-bottom: 3em; }
+
+  /* group headings on archive pages (publication years, teaching semesters) */
+  .archive h2 {
+    margin-top: 1.1em;
+    margin-bottom: 0.5em;
+    font-size: 1.15em;
+    color: #555;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 0.15em;
+  }
+
+  /* itemized news: bullet sits at the left margin, body hangs cleanly.
+     Flexbox is used instead of text-indent, which clipped the inline-block badges. */
+  .news-list { list-style: none; padding-left: 0; margin-left: 0; }
+  .news-list li { display: flex; align-items: baseline; margin-bottom: 0.55em; }
+  .news-list li::before { content: "\2022"; flex: 0 0 auto; margin-right: 0.5em; color: #868e96; }
+  .news-list li > .news-item-body { flex: 1 1 auto; min-width: 0; }
+</style>
+
+<!-- Open external links (other websites) in a new browser tab; internal links stay in the same tab. -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var here = window.location.hostname;
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      if (a.hostname && a.hostname !== here) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  });
+</script>
+
+<!-- end custom head snippets -->

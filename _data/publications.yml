@@ -1,0 +1,184 @@
+# All publications live here (one file, newest-first by `date`).
+# type: journal | conference | patent | thesis  (controls the colored tag)
+# Rendered by _pages/publications.html via _includes/pub-item.html
+
+- type: conference
+  date: "2026-08-24"
+  year: 2026
+  title: "LNTest: A Testbed for Evaluating Bitcoin Lightning Network-Based Botnets"
+  authors: "Thomas Bakaysa, <b>Ahmet Kurt</b>, Abdul-Salem Beibitkhan, Jesus Maria Romo Diaz de Leon, Tag Kalat, Joshua Kramer, Estela Rodriguez, Abraham Watkins, and Abdullah Aydeger"
+  venue: "21st International Conference on Availability, Reliability and Security (ARES 2026)"
+  details: "Linköping, Sweden"
+  note: "to appear"
+
+- type: conference
+  date: "2026-05-08"
+  year: 2026
+  title: "AI-Enabled Cloud-Edge-IoT Continuum for Hyper-Distributed and Trustworthy Applications"
+  authors: "Abdullah Aydeger, Engin Zeydan, and <b>Ahmet Kurt</b>"
+  venue: "35th Wireless and Optical Communications Conference (WOCC 2026)"
+  details: "Newark, NJ, USA"
+  note: "to appear"
+
+- type: journal
+  date: "2025-06-17"
+  year: 2025
+  title: "Cryptocurrency Forensics Automation: A Deep Learning and NLP-Based Approach for Mobile Platforms"
+  authors: "Abhishek Bhattarai, Abdulhadi Sahin, Maryna Veksler, <b>Ahmet Kurt</b>, Devrim Aras, Carlos Imery, and Kemal Akkaya"
+  venue: "Discover Computing"
+  details: "vol. 28, no. 1, art. 123"
+  doi: "https://doi.org/10.1007/s10791-025-09595-1"
+
+- type: journal
+  date: "2024-07-01"
+  year: 2024
+  title: "D-LNBot: A Scalable, Cost-Free and Covert Hybrid Botnet on Bitcoin's Lightning Network"
+  authors: "<b>Ahmet Kurt</b>, Enes Erdin, Kemal Akkaya, A. Selcuk Uluagac, and Mumin Cebe"
+  venue: "IEEE Transactions on Dependable and Secure Computing"
+  details: "vol. 21, no. 4, pp. 2162-2180"
+  doi: "https://doi.org/10.1109/TDSC.2023.3300738"
+
+- type: journal
+  date: "2024-05-01"
+  year: 2024
+  title: "LNGate²: Secure Bidirectional IoT Micro-payments Using Bitcoin's Lightning Network and Threshold Cryptography"
+  authors: "<b>Ahmet Kurt</b>, Kemal Akkaya, Sabri Yilmaz, Suat Mercan, Omer Shlomovits, and Enes Erdin"
+  venue: "IEEE Transactions on Mobile Computing"
+  details: "vol. 23, no. 5, pp. 6027-6044"
+  doi: "https://doi.org/10.1109/TMC.2023.3317704"
+
+- type: patent
+  date: "2023-09-12"
+  year: 2023
+  title: "Systems and Methods for Detecting Cryptocurrency Wallet Artifacts in a File System"
+  authors: "Abhishek Bhattarai, Maryna Veksler, <b>Ahmet Kurt</b>, Abdulhadi Sahin, and Kemal Akkaya"
+  venue: "U.S. Patent No. 11,755,958"
+  link: "https://patents.google.com/patent/US11755958B1/en"
+  linktext: "Google Patents"
+
+- type: conference
+  date: "2023-08-02"
+  year: 2023
+  title: "LNMesh: Who Said You Need Internet to Send Bitcoin? Offline Lightning Network Payments Using Community Wireless Mesh Networks"
+  authors: "<b>Ahmet Kurt</b>, Abdulhadi Sahin, Ricardo Harrilal-Parchment, and Kemal Akkaya"
+  venue: "IEEE 24th International Symposium on a World of Wireless, Mobile and Multimedia Networks (WoWMoM 2023)"
+  details: "pp. 261-270"
+  doi: "https://doi.org/10.1109/WoWMoM57956.2023.00041"
+
+- type: conference
+  date: "2023-07-16"
+  year: 2023
+  title: "Crypto Wallet Artifact Detection on Android Devices Using Advanced Machine Learning Techniques"
+  authors: "Abhishek Bhattarai, Maryna Veksler, Hadi Sahin, <b>Ahmet Kurt</b>, and Kemal Akkaya"
+  venue: "13th EAI International Conference on Digital Forensics & Cyber Crime (ICDF2C 2022)"
+  details: "Springer LNICST, pp. 111-132"
+  doi: "https://doi.org/10.1007/978-3-031-36574-4_7"
+
+- type: thesis
+  date: "2023-06-27"
+  year: 2023
+  title: "Enabling Third Layer Bitcoin Applications Using Lightning Network"
+  authors: "<b>Ahmet Kurt</b>"
+  venue: "Ph.D. Dissertation, Florida International University"
+  link: "https://digitalcommons.fiu.edu/record/13879"
+  linktext: "FIU Digital Commons"
+
+- type: journal
+  date: "2022-03-01"
+  year: 2022
+  title: "Cryptocurrency Solutions to Enable Micro-payments in Consumer IoT"
+  authors: "Suat Mercan, <b>Ahmet Kurt</b>, Enes Erdin, and Kemal Akkaya"
+  venue: "IEEE Consumer Electronics Magazine"
+  details: "vol. 11, no. 2, pp. 97-103"
+  doi: "https://doi.org/10.1109/MCE.2021.3060720"
+
+- type: journal
+  date: "2021-09-01"
+  year: 2021
+  title: "Distributed Connectivity Maintenance in Swarm of Drones During Post-Disaster Transportation Applications"
+  authors: "<b>Ahmet Kurt</b>, Nico Saputro, Kemal Akkaya, and A. Selcuk Uluagac"
+  venue: "IEEE Transactions on Intelligent Transportation Systems"
+  details: "vol. 22, no. 9, pp. 6061-6073"
+  doi: "https://doi.org/10.1109/TITS.2021.3066843"
+
+- type: journal
+  date: "2021-07-23"
+  year: 2021
+  title: "3-of-3 Multisignature Approach for Enabling Lightning Network Micro-payments on IoT Devices"
+  authors: "<b>Ahmet Kurt</b>, Suat Mercan, Enes Erdin, and Kemal Akkaya"
+  venue: "ITU Journal on Future and Evolving Technologies"
+  details: "vol. 2, no. 5, pp. 53-67"
+  doi: "https://doi.org/10.52953/wzpc8083"
+
+- type: conference
+  date: "2021-06-28"
+  year: 2021
+  title: "LNGate: Powering IoT with Next Generation Lightning Micro-payments Using Threshold Cryptography"
+  authors: "<b>Ahmet Kurt</b>, Suat Mercan, Omer Shlomovits, Enes Erdin, and Kemal Akkaya"
+  venue: "14th ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec 2021)"
+  details: "pp. 117-128"
+  doi: "https://doi.org/10.1145/3448300.3467833"
+
+- type: conference
+  date: "2021-06-24"
+  year: 2021
+  title: "Enabling Micro-payments on IoT Devices Using Bitcoin Lightning Network"
+  authors: "<b>Ahmet Kurt</b>, Suat Mercan, Enes Erdin, and Kemal Akkaya"
+  venue: "IEEE International Conference on Blockchain and Cryptocurrency (ICBC 2021)"
+  details: "pp. 1-3"
+  doi: "https://doi.org/10.1109/ICBC51069.2021.9461096"
+
+- type: conference
+  date: "2020-09-13"
+  year: 2020
+  title: "LNBot: A Covert Hybrid Botnet on Bitcoin Lightning Network for Fun and Profit"
+  authors: "<b>Ahmet Kurt</b>, Enes Erdin, Mumin Cebe, Kemal Akkaya, and A. Selcuk Uluagac"
+  venue: "25th European Symposium on Research in Computer Security (ESORICS 2020)"
+  details: "Springer LNCS, pp. 734-755"
+  doi: "https://doi.org/10.1007/978-3-030-59013-0_36"
+
+- type: conference
+  date: "2020-06-17"
+  year: 2020
+  title: "Connectivity Maintenance Extensions to IEEE 802.11s MAC Layer in ns-3"
+  authors: "<b>Ahmet Kurt</b> and Kemal Akkaya"
+  venue: "Workshop on ns-3 (WNS3 2020)"
+  details: "ACM, pp. 17-24"
+  doi: "https://doi.org/10.1145/3389400.3389408"
+
+- type: journal
+  date: "2020-05-27"
+  year: 2020
+  title: "Mathematical Model of the Ventricular Action Potential and Effects of Isoproterenol-Induced Cardiac Hypertrophy in Rats"
+  authors: "Sevgi Şengül Ayan, Ahmet K. Sırcan, Mohamedou Abewa, <b>Ahmet Kurt</b>, Uğur Dalaman, and Nazmi Yaraş"
+  venue: "European Biophysics Journal"
+  details: "vol. 49, no. 5, pp. 323-342"
+  doi: "https://doi.org/10.1007/s00249-020-01439-8"
+
+- type: conference
+  date: "2019-03-10"
+  year: 2019
+  title: "Modeling and Analyzing Ca²⁺ Channel Dynamics During Cardiac Action Potential"
+  authors: "Sevgi Şengül Ayan, Ahmet K. Sırcan, <b>Ahmet Kurt</b>, Hasan Özdoğan, and Nazmi Yaraş"
+  venue: "International Conference on Applied Analysis and Mathematical Modeling (ICAAMM 2019)"
+  link: "https://acikerisim.antalya.edu.tr/handle/20.500.12566/879"
+  linktext: "Full text"
+
+- type: journal
+  date: "2018-07-31"
+  year: 2018
+  title: "Computational Bifurcation Analysis to Find Dynamic Transitions of the Corticotroph Model"
+  authors: "Sevgi Şengül Ayan and <b>Ahmet Kurt</b>"
+  venue: "Communications Faculty of Sciences University of Ankara Series A2-A3 Physical Sciences and Engineering"
+  details: "vol. 60, no. 1, pp. 41-64"
+  link: "https://dergipark.org.tr/en/pub/aupse/article/432001"
+  linktext: "Full text"
+
+- type: conference
+  date: "2018-07-08"
+  year: 2018
+  title: "A Novel Low-Cost Beam Steering Method Using Dispersive Superstrate"
+  authors: "<b>Ahmet Kurt</b> and Muhammed S. Boybay"
+  venue: "IEEE International Symposium on Antennas and Propagation and USNC/URSI National Radio Science Meeting (AP-S/URSI 2018)"
+  details: "pp. 2547-2548"
+  doi: "https://doi.org/10.1109/APUSNCURSINRSM.2018.8608772"

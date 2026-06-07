@@ -1,0 +1,16 @@
+---
+layout: archive
+title: "Publications"
+hide_title: true
+permalink: /publications/
+author_profile: true
+---
+
+<p>A complete list of my publications is provided below.</p>
+
+{% assign pubs = site.data.publications | sort: "date" | reverse %}
+
+{% comment %} All publications (papers, patent, dissertation), grouped by year, newest first.
+   The colored tag on each entry shows its type. {% endcomment %}
+{% assign current_year = "" %}
+{% for p in pubs %}{% if p.year != current_year %}<h2 style="margin-top:1.1em;margin-bottom:0.5em;font-size:1.15em;color:#555;border-bottom:1px solid #e2e2e2;padding-bottom:0.15em;">{{ p.year }}</h2>{% assign current_year = p.year %}{% endif %}{% include pub-item.html p=p %}{% endfor %}
