@@ -10,6 +10,8 @@
   venue: "21st International Conference on Availability, Reliability and Security (ARES 2026)"
   details: "Linköping, Sweden"
   note: "to appear"
+  link: "https://arxiv.org/abs/2606.12887"
+  linktext: "arXiv"
 
 - type: conference
   date: "2026-05-08"
@@ -17,8 +19,8 @@
   title: "AI-Enabled Cloud-Edge-IoT Continuum for Hyper-Distributed and Trustworthy Applications"
   authors: "Abdullah Aydeger, Engin Zeydan, and <b>Ahmet Kurt</b>"
   venue: "35th Wireless and Optical Communications Conference (WOCC 2026)"
-  details: "Newark, NJ, USA"
-  note: "to appear"
+  details: "pp. 1-5"
+  doi: "https://doi.org/10.1109/WOCC69802.2026.11556173"
 
 - type: journal
   date: "2025-06-17"

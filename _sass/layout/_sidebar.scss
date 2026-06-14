@@ -305,6 +305,14 @@
 
   li {
     white-space: nowrap;
+
+    // In the desktop left-column sidebar the column is narrow, so let long
+    // entries (affiliation, email) wrap instead of clipping. The mobile
+    // dropdown keeps nowrap so its menu items stay on one line.
+    @include breakpoint($large) {
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
   }
 
   a {

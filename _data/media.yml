@@ -1,0 +1,119 @@
+# All media coverage lives here (one file, newest-first by `date`).
+# type: interview | feature | mention
+#   interview/feature -> cards (outlet logo + author byline); mention -> compact X tiles
+# date: used for sorting; display_date: shown on the page
+# author: reporter byline shown on a card
+# name + handle: shown on a mention tile; context: optional one-line note on a tile
+# Rendered by _pages/media.html (cards via _includes/media-item.html)
+
+# --- Cards: interviews and features ---
+
+- type: interview
+  date: "2023-10-02"
+  year: 2023
+  display_date: "October 2, 2023"
+  title: "Bitcoin Lightning Offline Transactions: The Future Of Peer-To-Peer Digital Cash?"
+  outlet: "Forbes"
+  url: "https://www.forbes.com/sites/digital-assets/2023/10/03/bitcoin-lightning-offline-transactions-the-future-of-peer-to-peer-digital-cash/"
+  author: "Susie Violet Ward"
+
+- type: interview
+  date: "2023-08-31"
+  year: 2023
+  display_date: "August 31, 2023"
+  title: "No Internet? You Could Still Use Bitcoin on the Lightning Network"
+  outlet: "Decrypt"
+  url: "https://decrypt.co/154499/no-internet-you-could-still-use-bitcoin-on-the-lightning-network"
+  author: "Alyssa Hertig"
+
+- type: feature
+  date: "2023-05-02"
+  year: 2023
+  display_date: "May 2, 2023"
+  title: "Issue #1339: Bull Market for Alternative Tx Relay and Broadcast Mechanisms"
+  outlet: "TFTC"
+  url: "https://www.tftc.io/issue-1339/"
+  author: "Marty Bent"
+
+- type: interview
+  date: "2021-08-02"
+  year: 2021
+  display_date: "August 2, 2021"
+  title: "LNGate allows Micro Crypto payments in a flash"
+  outlet: "Zengo"
+  url: "https://zengo.com/make-micro-payments-in-a-flash-the-power-of-lngate/"
+  author: "Amisha Shukla and Omer Shlomovits"
+
+- type: interview
+  date: "2020-05-11"
+  year: 2020
+  display_date: "May 11, 2020"
+  title: "Researchers Find Bitcoin's Lightning Network Susceptible to Cyberattacks"
+  outlet: "FIU News"
+  url: "https://news.fiu.edu/2020/how-bitcoins-lightning-network-can-be-susceptible-to-cyber-attacks"
+  author: "Diana Hernandez-Alende"
+
+- type: interview
+  date: "2019-12-30"
+  year: 2019
+  display_date: "December 30, 2019"
+  title: "Why Bitcoin's Lightning Might Help Botmasters Secretly Control Botnets"
+  outlet: "Decrypt"
+  url: "https://decrypt.co/15674/why-bitcoins-lightning-is-a-perfect-storm-for-malware-attacks"
+  author: "Tim Copeland"
+
+# --- Mentions: social posts (rendered as compact X tiles) ---
+
+- type: mention
+  date: "2026-05-30"
+  year: 2026
+  display_date: "May 30, 2026"
+  name: "Bitcoin Education Institute"
+  handle: "@BTCedu"
+  context: "Profile of Dr. Ahmet Kurt and his Lightning Network research."
+  url: "https://x.com/BTCedu/status/2060738005455827094"
+
+- type: mention
+  date: "2023-05-02"
+  year: 2023
+  display_date: "May 2, 2023"
+  name: "Marty Bent"
+  handle: "@MartyBent"
+  context: "On Bitcoin robustness and alternative transaction relay networks."
+  url: "https://x.com/MartyBent/status/1653539226032431107"
+
+- type: mention
+  date: "2023-05-01"
+  year: 2023
+  display_date: "May 1, 2023"
+  name: "L0la L33tz"
+  handle: "@L0laL33tz"
+  context: "“Who said you need Internet to send Bitcoin?”"
+  url: "https://x.com/L0laL33tz/status/1652885075162284032"
+
+- type: mention
+  date: "2023-05-01"
+  year: 2023
+  display_date: "May 1, 2023"
+  name: "Bitcoin News"
+  handle: "@BitcoinNewsCom"
+  context: "On LNMesh: using the Lightning Network during natural disasters and internet outages."
+  url: "https://x.com/BitcoinNewsCom/status/1653079056886251549"
+
+- type: mention
+  date: "2023-05-01"
+  year: 2023
+  display_date: "May 1, 2023"
+  name: "Adam Mashrique"
+  handle: "@sakak_musdom"
+  context: "On LNMesh and opening payment channels over community WiFi and Bluetooth mesh."
+  url: "https://x.com/sakak_musdom/status/1653028645970247682"
+
+- type: mention
+  date: "2019-12-31"
+  year: 2019
+  display_date: "December 31, 2019"
+  name: "John Carvalho"
+  handle: "@BitcoinErrorLog"
+  context: "On the LNBot research and its Decrypt coverage."
+  url: "https://x.com/BitcoinErrorLog/status/1211944254706257920"

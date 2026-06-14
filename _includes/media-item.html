@@ -1,0 +1,18 @@
+{% assign m = include.m %}
+{% case m.type %}
+  {% when 'interview' %}{% assign tlabel = 'Interview' %}{% assign tbg = '#d6336c' %}
+  {% when 'feature' %}{% assign tlabel = 'Feature' %}{% assign tbg = '#0c8599' %}
+  {% else %}{% assign tlabel = 'Mention' %}{% assign tbg = '#868e96' %}
+{% endcase %}
+<div class="media-card">
+  <div class="media-card-top">
+    {% include media-wordmark.html outlet=m.outlet %}
+    <span class="media-tag" style="background:{{ tbg }};">{{ tlabel }}</span>
+  </div>
+  <a class="media-card-link" href="{{ m.url }}"><strong class="media-title">{{ m.title }}</strong></a>
+  {% if m.author %}<p class="media-byline">By {{ m.author }}</p>{% endif %}
+  <div class="media-card-foot">
+    <span class="media-date">{{ m.display_date }}</span>
+    <span class="media-read">Read it &nearr;</span>
+  </div>
+</div>
