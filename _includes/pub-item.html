@@ -1,0 +1,13 @@
+{% assign p = include.p %}
+{% case p.type %}
+  {% when 'journal' %}{% assign tlabel = 'Journal' %}{% assign tbg = '#1c7ed6' %}
+  {% when 'conference' %}{% assign tlabel = 'Conference' %}{% assign tbg = '#0ca678' %}
+  {% when 'patent' %}{% assign tlabel = 'Patent' %}{% assign tbg = '#e8590c' %}
+  {% when 'thesis' %}{% assign tlabel = 'Dissertation' %}{% assign tbg = '#7048e8' %}
+  {% else %}{% assign tlabel = p.type %}{% assign tbg = '#868e96' %}
+{% endcase %}
+<div style="margin-bottom: 1.15em; line-height: 1.45;">
+  <span style="display:inline-block;background:{{ tbg }};color:#fff;font-size:0.62em;font-weight:700;padding:0.14em 0.6em;border-radius:0.8em;text-transform:uppercase;letter-spacing:0.04em;white-space:nowrap;vertical-align:middle;margin-right:0.4em;">{{ tlabel }}</span><strong>{{ p.title }}</strong><br>
+  <span style="font-size:0.9em;">{{ p.authors }}.</span><br>
+  <span style="font-size:0.9em;color:#909296;"><span style="background:#e7f1ff;color:#1a1a1a;padding:0.05em 0.2em;border-radius:0.2em;box-decoration-break:clone;-webkit-box-decoration-break:clone;">{{ p.venue }}</span>{% if p.details %} {{ p.details }}{% endif %}{% if p.year %}, {{ p.year }}{% endif %}{% if p.note %} ({{ p.note }}){% endif %}.{% if p.doi %}{% include pub-link.html url=p.doi label="DOI" %}{% endif %}{% if p.link %}{% include pub-link.html url=p.link label=p.linktext %}{% endif %}</span>
+</div>

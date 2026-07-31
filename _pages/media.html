@@ -1,0 +1,83 @@
+---
+layout: archive
+title: "Media"
+hide_title: true
+permalink: /media/
+author_profile: true
+---
+
+<style>
+.media-strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:0.55em 1.1em;margin:1.2em 0 1.5em;padding:0.9em 1.1em;border:1px solid var(--global-border-color);border-radius:10px;}
+.media-strip-label{font-size:0.68em;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--global-text-color);opacity:0.55;margin-right:0.3em;}
+.media-wm{color:var(--global-text-color);opacity:0.85;line-height:1;white-space:nowrap;}
+.media-logo{width:auto;display:inline-block;opacity:0.9;vertical-align:middle;}
+.media-logo-lg{height:1.2em;}
+.media-logo-sm{height:1em;}
+html[data-theme="dark"] .media-logo{filter:brightness(0) invert(1);}
+.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0.85em;margin-bottom:1.8em;align-items:start;}
+.media-card{position:relative;display:flex;flex-direction:column;gap:0.38em;border:1px solid var(--global-border-color);border-radius:10px;padding:0.8em 1em;transition:border-color 0.15s ease,box-shadow 0.15s ease,transform 0.15s ease;}
+.media-card:hover{border-color:var(--global-base-color);box-shadow:0 4px 14px rgba(0,0,0,0.10);transform:translateY(-2px);}
+.media-tag{display:inline-block;color:#fff;font-size:0.62em;font-weight:700;padding:0.14em 0.6em;border-radius:0.8em;text-transform:uppercase;letter-spacing:0.04em;white-space:nowrap;}
+.media-card-top{display:flex;justify-content:space-between;align-items:center;gap:0.5em;}
+.archive a.media-card-link,.archive a.media-card-link:hover{text-decoration:none;color:inherit;}
+.media-card-link::after{content:"";position:absolute;inset:0;border-radius:10px;}
+.media-title{font-size:1em;line-height:1.3;color:var(--global-text-color);}
+.media-card:hover .media-title{color:var(--global-base-color);}
+.media-byline{font-size:0.84em;line-height:1.4;margin:0;color:var(--global-text-color);opacity:0.62;}
+.media-card-foot{margin-top:0.2em;display:flex;justify-content:space-between;align-items:baseline;gap:0.5em;}
+.media-date{font-size:0.78em;color:var(--global-text-color);opacity:0.55;}
+.media-read{font-size:0.78em;font-weight:600;color:var(--global-link-color);white-space:nowrap;}
+.media-h2{margin-top:1.4em;margin-bottom:0.7em;font-size:1.15em;color:var(--global-text-color);opacity:0.75;border-bottom:1px solid var(--global-border-color);padding-bottom:0.15em;}
+.x-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:0.7em;margin-bottom:1.8em;align-items:start;}
+.archive a.x-card,.archive a.x-card:hover{text-decoration:none;color:inherit;}
+.x-card{position:relative;display:flex;flex-direction:column;gap:0.7em;border:1px solid var(--global-border-color);border-radius:14px;padding:0.95em 1em 0.85em;overflow:hidden;transition:border-color 0.15s ease,box-shadow 0.15s ease,transform 0.15s ease;}
+.x-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--x-accent);}
+.x-card:hover{border-color:var(--x-accent);box-shadow:0 7px 20px rgba(0,0,0,0.13);transform:translateY(-3px);}
+.x-card-top{display:flex;align-items:center;gap:0.6em;}
+.x-avatar{flex:none;width:2.4em;height:2.4em;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.82em;letter-spacing:0.02em;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+.x-id{display:flex;flex-direction:column;line-height:1.2;min-width:0;flex:1;}
+.x-name{font-weight:700;font-size:0.95em;line-height:1.2;color:var(--global-text-color);}
+.x-handle{font-size:0.8em;color:var(--global-link-color);}
+.x-logo{flex:none;width:1.1em;height:1.1em;fill:var(--global-text-color);opacity:0.5;}
+.x-date{font-size:0.74em;color:var(--global-text-color);opacity:0.5;}
+</style>
+
+<p>My research has been covered by the press and the wider Bitcoin community. Below are some of the interviews, features, and mentions.</p>
+
+{% assign items = site.data.media | sort: "date" | reverse %}
+{% assign press = items | where_exp: "i", "i.type != 'mention'" %}
+{% assign mentions = items | where_exp: "i", "i.type == 'mention'" %}
+
+<div class="media-strip">
+  <span class="media-strip-label">As featured in</span>
+  {% assign outlets = press | map: "outlet" | uniq %}
+  {% for o in outlets %}{% include media-wordmark.html outlet=o size="strip" %}{% endfor %}
+</div>
+
+<div class="media-grid">
+{% for m in press %}{% include media-item.html m=m %}{% endfor %}
+</div>
+
+{% if mentions.size > 0 %}
+<h2 class="media-h2">Mentions</h2>
+{% assign xpalette = "#1d9bf0,#7048e8,#0ca678,#e8590c,#d6336c,#1098ad" | split: "," %}
+<div class="x-grid">
+{% for m in mentions %}
+{% assign ci = forloop.index0 | modulo: 6 %}
+{% assign accent = xpalette[ci] %}
+{% assign words = m.name | split: " " %}
+{% capture initials %}{{ words[0] | slice: 0 }}{% if words[1] %}{{ words[1] | slice: 0 }}{% endif %}{% endcapture %}
+<a class="x-card" href="{{ m.url }}" style="--x-accent:{{ accent }};">
+  <span class="x-card-top">
+    <span class="x-avatar" style="background:{{ accent }};">{{ initials }}</span>
+    <span class="x-id">
+      <span class="x-name">{{ m.name }}</span>
+      <span class="x-handle">{{ m.handle }}</span>
+    </span>
+    <svg class="x-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </span>
+  <span class="x-date">{{ m.display_date }}</span>
+</a>
+{% endfor %}
+</div>
+{% endif %}

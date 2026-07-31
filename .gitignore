@@ -21,3 +21,23 @@ package-lock.json
 
 # Ignore files created by MacOS
 .DS_Store
+
+# Local source materials (original CV/headshot/Scholar export), not published
+_source/
+
+# Local tooling & editor/dev config (not part of the published site)
+.devcontainer/
+
+# Internal setup notes
+SETUP.md
+
+# Unused AcademicPages template utilities, demo data & docs-only images
+markdown_generator/
+scripts/
+images/themes/
+.github/CONTRIBUTING.md
+.github/ISSUE_TEMPLATE/
+.github/PULL_REQUEST_TEMPLATE.md
+
+# Private documents (annual evaluations, etc.) - never publish
+*Annual Evaluation*.pdf

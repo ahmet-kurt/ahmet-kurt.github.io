@@ -9,39 +9,39 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name / Site Title"
+title                    : "Ahmet Kurt's Personal Website"
+masthead_title           : "Ahmet Kurt"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+name                     : &name "Ahmet Kurt"
+description              : &description "Personal website of Ahmet Kurt, Ph.D., Assistant Professor of Computer Science at East Texas A&M University. Research in cybersecurity, blockchain & the Bitcoin Lightning Network, IoT security, and wireless networks."
+url                      : "https://ahmet-kurt.github.io"
+baseurl                  : "" # leave "" for a personal site hosted at username.github.io
+repository               : "ahmet-kurt/ahmet-kurt.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
-  uri              : # URL
-  email            : "none@example.org" 
+  avatar           : "profile.jpg"
+  name             : "Ahmet Kurt, Ph.D."
+  pronouns         : # example: "she/her"
+  bio              : "Assistant Professor at ETAMU"
+  location         : "Bryan, TX, USA"
+  employer         : "East Texas A&M University"
+  uri              : # Your personal website URL (optional)
+  email            : "ahmet.kurt@etamu.edu"
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=VLJPgyAAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : # TODO: add your ORCID URL, e.g. "https://orcid.org/0000-0000-0000-0000"
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -51,13 +51,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "ahmet-kurt"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Your Bluesky username (optional)
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "ahmet-kurt-fiu"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -74,7 +74,7 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : # Username for X / Twitter
+  twitter          : "startimeahmet"
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
@@ -82,14 +82,7 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+# Publications are defined in _data/publications.yml and rendered by _pages/publications.html
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -138,7 +131,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : &twitter "startimeahmet"
 facebook:
   username               :
   app_id                 :
@@ -190,6 +183,7 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - SETUP.md
   - tmp
   - vendor
 keep_files:
@@ -221,10 +215,9 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
+  news:
+    output: false
   teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
     output: true
     permalink: /:collection/:path/
   portfolio:
@@ -302,7 +295,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

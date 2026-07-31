@@ -1,0 +1,12 @@
+{% comment %} Outlet wordmark: real logo image for outlets with a file in images/logos/, styled text otherwise.
+   Pass outlet=<name> and optionally size="strip" for the large press bar variant. {% endcomment %}
+{% include base_path %}
+{% if include.size == "strip" %}{% assign fs = "1.35em" %}{% assign lcls = "media-logo media-logo-lg" %}{% else %}{% assign fs = "0.95em" %}{% assign lcls = "media-logo media-logo-sm" %}{% endif %}
+{% case include.outlet %}
+  {% when 'Forbes' %}<img class="{{ lcls }}" src="{{ base_path }}/images/logos/forbes.svg" alt="Forbes">
+  {% when 'Decrypt' %}<img class="{{ lcls }}" src="{{ base_path }}/images/logos/decrypt.svg" alt="Decrypt">
+  {% when 'Zengo' %}<img class="{{ lcls }}" src="{{ base_path }}/images/logos/zengo.svg" alt="Zengo">
+  {% when 'FIU News' %}<img class="{{ lcls }}" src="{{ base_path }}/images/logos/fiu-news.png" alt="FIU News">
+  {% when 'TFTC' %}<img class="{{ lcls }}" src="{{ base_path }}/images/logos/tftc.svg" alt="TFTC">
+  {% else %}<span class="media-wm" style="font-size:{{ fs }};font-weight:700;">{{ include.outlet }}</span>
+{% endcase %}
