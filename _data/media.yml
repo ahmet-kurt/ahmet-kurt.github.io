@@ -9,6 +9,15 @@
 # --- Cards: interviews and features ---
 
 - type: interview
+  date: "2026-08-07"
+  year: 2026
+  display_date: "August 7, 2026"
+  title: "Assistant Professor Gains Valuable Insights into AI Use in Cybersecurity Education During Exclusive Fellowship"
+  outlet: "ETAMU News"
+  url: "https://www.etamu.edu/news/assistant-professor-gains-valuable-insights-into-ai-use-in-cybersecurity-education-during-exclusive-fellowship/"
+  author: "Ryan Scott"
+
+- type: interview
   date: "2023-10-02"
   year: 2023
   display_date: "October 2, 2023"

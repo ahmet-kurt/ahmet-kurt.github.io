@@ -48,10 +48,14 @@ html[data-theme="dark"] .media-logo{filter:brightness(0) invert(1);}
 {% assign press = items | where_exp: "i", "i.type != 'mention'" %}
 {% assign mentions = items | where_exp: "i", "i.type == 'mention'" %}
 
+{% comment %} Strip order is curated, not date-driven: press outlets first, university newsrooms last.
+   Any outlet missing from strip_order still renders, appended newest-first. {% endcomment %}
+{% assign strip_order = "Forbes,Decrypt,TFTC,Zengo,ETAMU News,FIU News" | split: "," %}
 <div class="media-strip">
   <span class="media-strip-label">As featured in</span>
   {% assign outlets = press | map: "outlet" | uniq %}
-  {% for o in outlets %}{% include media-wordmark.html outlet=o size="strip" %}{% endfor %}
+  {% for o in strip_order %}{% if outlets contains o %}{% include media-wordmark.html outlet=o size="strip" %}{% endif %}{% endfor %}
+  {% for o in outlets %}{% unless strip_order contains o %}{% include media-wordmark.html outlet=o size="strip" %}{% endunless %}{% endfor %}
 </div>
 
 <div class="media-grid">
