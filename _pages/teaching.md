@@ -8,6 +8,12 @@ author_profile: true
 
 Courses I have taught at East Texas A&M University, listed by semester.
 
+## Fall 2026
+
+* **CSCI 399 & 499:** Junior & Senior Cyber Design Project *(combined)*
+* **CSCI 451:** Wireless and Mobile Security
+* **CSCI 463:** Systems Security & Trusted Computing
+
 ## Summer II 2026
 
 * **CSCI 430:** Operating Systems
