@@ -3,6 +3,14 @@
 # Rendered by _pages/publications.html via _includes/pub-item.html
 
 - type: conference
+  date: "2026-11-04"
+  year: 2026
+  title: "Customizable Interactive Textbooks for Teaching Programming to Information Systems Students: Classroom Evidence and an AI-Era Roadmap"
+  authors: "Ramadan Abdunabi, Ilham AB Hbaci, <b>Ahmet Kurt</b>, and Sagar Bhatt"
+  venue: "Information Systems & Computing Academic Professionals Conference (ISCAP 2026)"
+  note: "to appear"
+
+- type: conference
   date: "2026-10-26"
   year: 2026
   title: "Agentic Cryptographic Agility for Post-Quantum Smart Grid Communications"
