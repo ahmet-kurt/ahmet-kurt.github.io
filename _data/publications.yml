@@ -1,21 +1,26 @@
 # All publications live here (one file, newest-first by `date`).
-# type: journal | conference | patent | thesis  (controls the colored tag)
+# date: publication date for published work; acceptance or arXiv posting date for work not yet published (update it once published).
+# type: journal | conference | patent | thesis | preprint  (controls the colored tag)
+# star: true  adds a shining gold star after the type badge so the entry stands out (use for the newest work)
 # Rendered by _pages/publications.html via _includes/pub-item.html
 
+- type: preprint
+  star: true
+  date: "2026-09-12"
+  year: 2026
+  title: "PQLN: Post-Quantum Security for the Bitcoin Lightning Network's Off-Chain Surfaces"
+  authors: "<b>Ahmet Kurt</b>, Abdul-Salem Beibitkhan, Yacoub Hanna, and Abdullah Aydeger"
+  venue: "arXiv preprint"
+  details: "arXiv:2609.13781"
+  link: "https://arxiv.org/abs/2609.13781"
+  linktext: "arXiv"
+
 - type: conference
-  date: "2026-11-04"
+  date: "2026-09-08"
   year: 2026
   title: "Customizable Interactive Textbooks for Teaching Programming to Information Systems Students: Classroom Evidence and an AI-Era Roadmap"
   authors: "Ramadan Abdunabi, Ilham AB Hbaci, <b>Ahmet Kurt</b>, and Sagar Bhatt"
   venue: "Information Systems & Computing Academic Professionals Conference (ISCAP 2026)"
-  note: "to appear"
-
-- type: conference
-  date: "2026-10-26"
-  year: 2026
-  title: "Agentic Cryptographic Agility for Post-Quantum Smart Grid Communications"
-  authors: "Abdullah Aydeger and <b>Ahmet Kurt</b>"
-  venue: "IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm 2026)"
   note: "to appear"
 
 - type: conference
@@ -27,6 +32,14 @@
   note: "to appear"
   link: "https://arxiv.org/abs/2606.12887"
   linktext: "arXiv"
+
+- type: conference
+  date: "2026-07-24"
+  year: 2026
+  title: "Agentic Cryptographic Agility for Post-Quantum Smart Grid Communications"
+  authors: "Abdullah Aydeger and <b>Ahmet Kurt</b>"
+  venue: "IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm 2026)"
+  note: "to appear"
 
 - type: conference
   date: "2026-05-08"

@@ -43,6 +43,77 @@
   .news-list li { display: flex; align-items: baseline; margin-bottom: 0.55em; }
   .news-list li::before { content: "\2022"; flex: 0 0 auto; margin-right: 0.5em; color: #868e96; }
   .news-list li > .news-item-body { flex: 1 1 auto; min-width: 0; }
+
+  /* ---- Type/tag badges (publications + news) and the "newest work" star -------------------
+     Vertical alignment is the subtle part. `vertical-align: middle` centers a box on the
+     x-height of the surrounding text, but next to capitals and digits the eye wants the
+     cap-height center, which is higher by (cap - ex) / 2: about 0.09-0.10em for the fonts in
+     our stack (SF, Segoe UI, Roboto, Helvetica). Two layers:
+       1. Fallback (every browser): `middle` plus a 0.09em lift.
+       2. Modern browsers (Chrome/Edge 133+, Safari 18.2+; others as they ship): exact,
+          font-independent alignment via the `cap` unit, and `text-box-trim` so the badge's
+          padding is symmetric around the capital letters instead of around the font's
+          ascender/descender box (which left more room below the letters than above). */
+  .type-badge {
+    display: inline-block;
+    font-size: calc(1em * var(--badge-scale));
+    color: #fff;
+    font-weight: 700;
+    padding: 0.14em 0.6em;
+    border-radius: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    vertical-align: middle;
+    position: relative;
+    top: calc(-0.09em / var(--badge-scale)); /* = 0.09em of the surrounding text */
+  }
+  .pub-badge  { --badge-scale: 0.62; margin-right: 0.4em; }
+  .news-badge { --badge-scale: 0.66; padding: 0.12em 0.55em; }
+
+  /* Shining gold star that marks the newest work (star: true on a publication entry or a news
+     item). Inline SVG (see _includes/star.html) so its box is exactly the glyph; the animation
+     pulses the glow and turns the star clockwise (72deg = one point, so the loop is seamless). */
+  .shine-star {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin: 0 0.3em 0 0.1em;
+    vertical-align: middle;
+    position: relative;
+    top: -0.09em; /* fallback lift, same reasoning as the badges */
+    color: #f59f00;
+    filter: drop-shadow(0 0 2px rgba(255, 196, 0, 0.6));
+    animation: shine-star-turn 2.4s ease-in-out infinite;
+  }
+  .shine-star svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+  .news-list .shine-star { margin: 0 0.1em; }
+  @keyframes shine-star-turn {
+    0%   { transform: rotate(0deg)  scale(1);   filter: drop-shadow(0 0 2px rgba(255, 196, 0, 0.6)); }
+    50%  { transform: rotate(36deg) scale(1.3); filter: drop-shadow(0 0 6px rgba(255, 212, 59, 1)) drop-shadow(0 0 12px rgba(255, 160, 0, 0.6)); }
+    100% { transform: rotate(72deg) scale(1);   filter: drop-shadow(0 0 2px rgba(255, 196, 0, 0.6)); }
+  }
+  @media (prefers-reduced-motion: reduce) { .shine-star { animation: none; } }
+
+  /* Exact alignment where the `cap` unit exists: the star is a 1em box sitting on the
+     baseline, so lower it until its center is at half the text's cap height. */
+  @supports (vertical-align: calc(0.5cap - 0.5em)) {
+    .shine-star { position: static; top: auto; vertical-align: calc(0.5cap - 0.5em); }
+  }
+  /* Exact badges where text-box-trim exists: trim the box to the capitals (top = cap height,
+     bottom = baseline), pad back to the same pill height, and raise the badge by half the
+     difference between the text's cap height (1cap / scale in badge units) and its own. */
+  @supports (text-box-trim: trim-both) and (text-box-edge: cap alphabetic) {
+    .type-badge {
+      text-box-trim: trim-both;
+      text-box-edge: cap alphabetic;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      position: static;
+      top: auto;
+      vertical-align: calc(1cap * (1 / var(--badge-scale) - 1) / 2);
+    }
+  }
 </style>
 
 <!-- Open external links (other websites) in a new browser tab; internal links stay in the same tab. -->
