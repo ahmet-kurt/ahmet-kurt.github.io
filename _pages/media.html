@@ -50,7 +50,7 @@ html[data-theme="dark"] .media-logo{filter:brightness(0) invert(1);}
 
 {% comment %} Strip order is curated, not date-driven: press outlets first, university newsrooms last.
    Any outlet missing from strip_order still renders, appended newest-first. {% endcomment %}
-{% assign strip_order = "Forbes,Decrypt,TFTC,Zengo,ETAMU News,FIU News" | split: "," %}
+{% assign strip_order = "Forbes,Decrypt,TFTC,bitcoin++ Insider Edition,Zengo,ETAMU News,FIU News" | split: "," %}
 <div class="media-strip">
   <span class="media-strip-label">As featured in</span>
   {% assign outlets = press | map: "outlet" | uniq %}
@@ -70,7 +70,7 @@ html[data-theme="dark"] .media-logo{filter:brightness(0) invert(1);}
 {% assign ci = forloop.index0 | modulo: 6 %}
 {% assign accent = xpalette[ci] %}
 {% assign words = m.name | split: " " %}
-{% capture initials %}{{ words[0] | slice: 0 }}{% if words[1] %}{{ words[1] | slice: 0 }}{% endif %}{% endcapture %}
+{% capture initials %}{{ words[0] | slice: 0 | upcase }}{% if words[1] %}{{ words[1] | slice: 0 | upcase }}{% endif %}{% endcapture %}
 <a class="x-card" href="{{ m.url }}" style="--x-accent:{{ accent }};">
   <span class="x-card-top">
     <span class="x-avatar" style="background:{{ accent }};">{{ initials }}</span>

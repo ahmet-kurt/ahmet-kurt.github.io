@@ -8,6 +8,15 @@
 
 # --- Cards: interviews and features ---
 
+- type: feature
+  date: "2026-09-21"
+  year: 2026
+  display_date: "September 21, 2026"
+  title: "Quantum Lightning — Last Week in Bitcoin (Sep 14 - 20)"
+  outlet: "bitcoin++ Insider Edition"
+  url: "https://insider.btcpp.dev/p/quantum-lightning-last-week-in-bitcoin"
+  author: "Tuma"
+
 - type: interview
   date: "2026-08-07"
   year: 2026
@@ -72,6 +81,24 @@
   author: "Tim Copeland"
 
 # --- Mentions: social posts (rendered as compact X tiles) ---
+
+- type: mention
+  date: "2026-09-21"
+  year: 2026
+  display_date: "September 21, 2026"
+  name: "bitcoin++ Insider Edition"
+  handle: "@btcinsider__"
+  context: "Weekly update featuring PQLN as a first working proof-of-concept for post-quantum Lightning."
+  url: "https://x.com/btcinsider__/status/2102037689499304332"
+
+- type: mention
+  date: "2026-09-16"
+  year: 2026
+  display_date: "September 16, 2026"
+  name: "Aye"
+  handle: "@ayebytes"
+  context: "On PQLN, a post-quantum Lightning fork of rust-lightning that upgrades transport, gossip, and invoices without touching on-chain keys."
+  url: "https://x.com/ayebytes/status/2100291037004529827"
 
 - type: mention
   date: "2026-05-30"
