@@ -4,6 +4,17 @@
 # star: true  adds a shining gold star after the type badge so the entry stands out (use for the newest work)
 # Rendered by _pages/publications.html via _includes/pub-item.html
 
+- type: conference
+  date: "2026-10-23"
+  year: 2026
+  title: "LNTest: A Testbed for Evaluating Bitcoin Lightning Network-Based Botnets"
+  authors: "Thomas Bakaysa, <b>Ahmet Kurt</b>, Abdul-Salem Beibitkhan, Jesus Maria Romo Diaz de Leon, Tag Kalat, Joshua Kramer, Estela Rodriguez, Abraham Watkins, and Abdullah Aydeger"
+  venue: "21st International Conference on Availability, Reliability and Security (ARES 2026)"
+  details: "pp. 160-182"
+  doi: "https://doi.org/10.1007/978-3-032-36874-4_8"
+  link: "https://arxiv.org/abs/2606.12887"
+  linktext: "arXiv"
+
 - type: preprint
   star: true
   date: "2026-09-12"
@@ -22,16 +33,6 @@
   authors: "Ramadan Abdunabi, Ilham AB Hbaci, <b>Ahmet Kurt</b>, and Sagar Bhatt"
   venue: "Information Systems & Computing Academic Professionals Conference (ISCAP 2026)"
   note: "to appear"
-
-- type: conference
-  date: "2026-08-24"
-  year: 2026
-  title: "LNTest: A Testbed for Evaluating Bitcoin Lightning Network-Based Botnets"
-  authors: "Thomas Bakaysa, <b>Ahmet Kurt</b>, Abdul-Salem Beibitkhan, Jesus Maria Romo Diaz de Leon, Tag Kalat, Joshua Kramer, Estela Rodriguez, Abraham Watkins, and Abdullah Aydeger"
-  venue: "21st International Conference on Availability, Reliability and Security (ARES 2026)"
-  note: "to appear"
-  link: "https://arxiv.org/abs/2606.12887"
-  linktext: "arXiv"
 
 - type: conference
   date: "2026-07-24"
