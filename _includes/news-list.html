@@ -1,8 +1,9 @@
 {% comment %}
 Renders the news feed in reverse-chronological order with a colored category badge.
 Pass `limit` to cap the number of items, e.g. {% include news-list.html limit=6 %}.
-Each news item sets a `tag` (paper, funding, program, service, talk, teaching, media, new position, event) for the badge color.
-`star: true` in the front matter adds a shining gold star after the badge (use for the newest work).
+Each news item sets a `tag` (paper, funding, program, service, conference, teaching, media, new position, event) for the badge color.
+`conference` covers talks and paper presentations at conferences, whether given by me or a co-author (there is no separate `talk` tag).
+`star: true` in the front matter adds a shining gold star after the badge (reserved for standout work like PQLN; it does not move to newer items).
 Badge styles (.type-badge) and the star live in _includes/head/custom.html; only the badge color is set here.
 {% endcomment %}
 {% assign news_items = site.news | sort: 'date' | reverse %}
@@ -14,7 +15,7 @@ Badge styles (.type-badge) and the star live in _includes/head/custom.html; only
     {% when 'funding' %}{% assign badge_bg = '#2f9e44' %}
     {% when 'program' %}{% assign badge_bg = '#e64980' %}
     {% when 'service' %}{% assign badge_bg = '#9c36b5' %}
-    {% when 'talk' %}{% assign badge_bg = '#e8590c' %}
+    {% when 'conference' %}{% assign badge_bg = '#e8590c' %}
     {% when 'new position' %}{% assign badge_bg = '#0ca678' %}
     {% when 'teaching' %}{% assign badge_bg = '#1098ad' %}
     {% when 'media' %}{% assign badge_bg = '#c92a2a' %}

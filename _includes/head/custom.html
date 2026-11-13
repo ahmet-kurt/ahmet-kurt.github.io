@@ -44,7 +44,7 @@
   .news-list li::before { content: "\2022"; flex: 0 0 auto; margin-right: 0.5em; color: #868e96; }
   .news-list li > .news-item-body { flex: 1 1 auto; min-width: 0; }
 
-  /* ---- Type/tag badges (publications + news) and the "newest work" star -------------------
+  /* ---- Type/tag badges (publications + news) and the "standout work" star -----------------
      Vertical alignment is the subtle part. `vertical-align: middle` centers a box on the
      x-height of the surrounding text, but next to capitals and digits the eye wants the
      cap-height center, which is higher by (cap - ex) / 2: about 0.09-0.10em for the fonts in
@@ -71,7 +71,7 @@
   .pub-badge  { --badge-scale: 0.62; margin-right: 0.4em; }
   .news-badge { --badge-scale: 0.66; padding: 0.12em 0.55em; }
 
-  /* Shining gold star that marks the newest work (star: true on a publication entry or a news
+  /* Shining gold star that marks standout work (star: true on a publication entry or a news
      item). Inline SVG (see _includes/star.html) so its box is exactly the glyph; the animation
      pulses the glow and turns the star clockwise (72deg = one point, so the loop is seamless). */
   .shine-star {

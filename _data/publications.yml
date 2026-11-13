@@ -1,8 +1,16 @@
 # All publications live here (one file, newest-first by `date`).
 # date: publication date for published work; acceptance or arXiv posting date for work not yet published (update it once published).
 # type: journal | conference | patent | thesis | preprint  (controls the colored tag)
-# star: true  adds a shining gold star after the type badge so the entry stands out (use for the newest work)
+# star: true  adds a shining gold star after the type badge so the entry stands out (reserved for standout work like PQLN; it does not move to newer entries)
 # Rendered by _pages/publications.html via _includes/pub-item.html
+
+- type: conference
+  date: "2026-11-11"
+  year: 2027
+  title: "Selecting Side-Channel Countermeasures for Post-Quantum Cryptography on Resource-Constrained Cyber-Physical Devices"
+  authors: "Abdullah Aydeger and <b>Ahmet Kurt</b>"
+  venue: "IEEE 24th Consumer Communications & Networking Conference (CCNC 2027)"
+  note: "to appear"
 
 - type: conference
   date: "2026-11-04"
